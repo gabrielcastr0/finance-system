@@ -18,7 +18,7 @@ const App = () => {
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
   
   useEffect(()=>{
-    const storageArray: any = localStorage.getItem("teste");
+    const storageArray: any = localStorage.getItem("myFinances");
     const parseArray: any = JSON.parse(storageArray);
     const formatArray: any = parseArray?.map((item: any) => {
       item.date = new Date(item.date);
@@ -62,6 +62,7 @@ const App = () => {
   }
 
   const handleAddItem = (item: Item) => {
+    window.location.reload();
 
     const newItem = {
       date: new Date(),
@@ -72,12 +73,15 @@ const App = () => {
 
     let newList: any = [];
 
+    newList.push(newItem);
+    localStorage.setItem("myFinances",JSON.stringify(newList));
+
     if(list.length > 0){
       newList = list;
     }
 
     newList.push(newItem);
-    localStorage.setItem("teste",JSON.stringify(newList));
+    localStorage.setItem("myFinances",JSON.stringify(newList));
     setList(newList);
 
     setFilteredList( filterListByMonth(newList, currentMonth) );
