@@ -89,15 +89,18 @@ const App = () => {
     handleShowModal();
   }
 
-  // const handleDeleteItem = (title: string) => {
+  const handleDeleteItem = (title: string) => {
+    window.location.reload();
 
-  //   let newlist: Item[] = list.filter((item: Item) => {
-  //     if (item.title != title)
-  //       return item;
-  //   });
+    let newlist: Item[] = list.filter((item: Item) => {
+      if (item.title != title)
+        return item;
+    });
 
-  //   setList(newlist);
-  // }
+    console.log(list);
+
+    localStorage.setItem("myFinances", JSON.stringify(newlist));
+  }
 
   return(
     <Styled.Container>
@@ -122,7 +125,7 @@ const App = () => {
           />
         }
 
-        <TableArea list={filteredList} onDeleteItem={() => {}}/>
+        <TableArea list={filteredList} onDeleteItem={handleDeleteItem}/>
       </Styled.Body>
     </Styled.Container>
   )
