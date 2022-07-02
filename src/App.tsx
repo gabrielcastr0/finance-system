@@ -93,7 +93,7 @@ const App = () => {
     window.location.reload();
 
     let newlist: Item[] = list.filter((item: Item) => {
-      if (item.title != title)
+      if (item.title !== title)
         return item;
     });
 
