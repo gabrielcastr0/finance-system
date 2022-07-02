@@ -20,7 +20,7 @@ export const InputArea = ({onAdd}: Props) => {
   
   return(
     <Styled.Container>
-      <button onClick={handleAddEvent}>+ Adicionar</button>
+      <button onClick={handleAddEvent}>+Adicionar</button>
     </Styled.Container>
   );
 }

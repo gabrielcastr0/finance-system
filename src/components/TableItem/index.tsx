@@ -5,9 +5,14 @@ import {categories} from '../../data/categories';
 
 type Props = {
   item: Item;
+  handleDeleteItem: (str: string) => void;
 }
 
-export const TableItem = ({item}: Props) => {
+export const TableItem = ({item, handleDeleteItem }: Props) => {
+  const onDeleteItem = ({title} : Item) => {
+    handleDeleteItem(title);
+};
+
   return(
     <Styled.TableLine>
       <Styled.TableColumn>{formatDate(item.date)}</Styled.TableColumn>
@@ -21,6 +26,10 @@ export const TableItem = ({item}: Props) => {
         <Styled.Value color={categories[item.category].expense ? 'red' : 'green'}>
           R$ {item.value}
         </Styled.Value>
+      </Styled.TableColumn>
+
+      <Styled.TableColumn>
+        <button onClick={() => onDeleteItem(item)} type="button">Deletar</button>        
       </Styled.TableColumn>
     </Styled.TableLine>
   )
