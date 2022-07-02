@@ -32,7 +32,7 @@ const App = () => {
   }, [list])
 
   useEffect(()=>{
-    if(list != undefined){
+    if(list !== undefined){
       setFilteredList( filterListByMonth(list, currentMonth) );
     }
   }, [list, currentMonth]);

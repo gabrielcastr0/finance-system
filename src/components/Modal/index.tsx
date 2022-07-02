@@ -65,17 +65,17 @@ export const Modal = ({ onShowModal, onAddItem }: Props) => {
 
         let ok = true;
 
-        if (title == '') {
+        if (title === '') {
             ok = false;
             alert("Preencha o título");
         }
 
-        if (category == '') {
+        if (category === '') {
             ok = false;
             alert("Selecione a categoria");
         }
 
-        if (value == 0) {
+        if (value === 0) {
             ok = false;
             alert("informe o valor");
         }
