@@ -22,4 +22,8 @@ export const Body = styled.div`
   margin: auto;
   max-width: 61.25rem;
   margin-bottom: 3.125rem;
+
+  @media screen and (max-width: 768px){
+    padding: 0 10px 0 10px;
+  }
 `;

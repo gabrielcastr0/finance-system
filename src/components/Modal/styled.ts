@@ -102,14 +102,15 @@ export const Footer = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 10px;
 `;
 
 
-export const BtnAdd = styled.button`
+export const BtnActions = styled.button<{close: boolean}>`
     margin-top: 20px;
     outline: 0;
     border: 0;
-    background-color: green;
+    background-color: ${props => props.close ? 'red' : 'green'};
     color: #FFF;
     padding: 10px 20px;
     cursor: pointer;

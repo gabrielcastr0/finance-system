@@ -7,3 +7,17 @@ export const Container = styled.div`
   padding: 20px;
   margin-top: 20px;
 `;
+
+export const AddButton = styled.button`
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 15px;
+
+  > svg{
+    font-size: 20px;
+  }
+`;

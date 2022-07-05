@@ -1,3 +1,5 @@
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { categories } from '../../data/categories';
 import { items } from '../../data/items';
@@ -7,6 +9,7 @@ import * as Styled from './styled';
 type Props = {
     onShowModal: () => void;
     onAddItem: ({ title, category, value }: Item) => void;
+    close?: boolean;
 }
 
 type categorieOption = {
@@ -14,7 +17,7 @@ type categorieOption = {
     title?: string;
 }
 
-export const Modal = ({ onShowModal, onAddItem }: Props) => {
+export const Modal = ({ onShowModal, onAddItem, close }: Props) => {
     const [title, setTitle] = useState('');
     const [category, setCategory] = useState('');
     const [value, setValue] = useState(0);
@@ -38,11 +41,8 @@ export const Modal = ({ onShowModal, onAddItem }: Props) => {
     }
 
     const closeModal = (e: any) => {
-        if (e.target.classList.contains("modal")) {
+        if (e.target.classList.contains("close")) {
             onShowModal();
-        }
-        else {
-
         }
     }
 
@@ -124,9 +124,8 @@ export const Modal = ({ onShowModal, onAddItem }: Props) => {
                     </Styled.ValueArea>
                 </Styled.Body>
                 <Styled.Footer>
-                    <Styled.BtnAdd
-                        onClick={handleAddItem}
-                    >Adicionar</Styled.BtnAdd>
+                    <Styled.BtnActions onClick={closeModal} close={true} className="close">Cancelar</Styled.BtnActions> 
+                    <Styled.BtnActions onClick={handleAddItem} close={false}>Adicionar</Styled.BtnActions>
                 </Styled.Footer>
             </Styled.Content>
         </Styled.Container>

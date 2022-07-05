@@ -3,6 +3,9 @@ import {Item} from '../../types/Item';
 import {formatDate} from '../../helpers/dateFilter';
 import {categories} from '../../data/categories';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashCan, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+
 type Props = {
   item: Item;
   handleDeleteItem: (str: string) => void;
@@ -29,7 +32,13 @@ export const TableItem = ({item, handleDeleteItem }: Props) => {
       </Styled.TableColumn>
 
       <Styled.TableColumn>
-        <button onClick={() => onDeleteItem(item)} type="button">Deletar</button>        
+      <Styled.ActionButton onClick={() => alert("Em construção...")} type="button">
+          <FontAwesomeIcon icon={faPenToSquare} />  
+        </Styled.ActionButton>   
+
+        <Styled.ActionButton onClick={() => onDeleteItem(item)} type="button">
+          <FontAwesomeIcon icon={faTrashCan} />  
+        </Styled.ActionButton>        
       </Styled.TableColumn>
     </Styled.TableLine>
   )

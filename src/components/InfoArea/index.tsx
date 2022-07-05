@@ -1,4 +1,6 @@
 import * as Styled from './styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import {formatCurrentMonth} from '../../helpers/dateFilter';
 import {ResumeItem} from '../ResumeItem';
@@ -29,9 +31,13 @@ export const InfoArea = ({currentMonth, onMonthChange, income, expense}: Props) 
   return(
     <Styled.Container>
       <Styled.MonthArea>
-        <Styled.MonthArrow onClick={handlePrevMonth}>⬅️</Styled.MonthArrow>
+        <Styled.MonthArrow onClick={handlePrevMonth}>
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </Styled.MonthArrow>
         <Styled.MonthTitle>{formatCurrentMonth(currentMonth)}</Styled.MonthTitle>
-        <Styled.MonthArrow onClick={handleNextMonth}>➡️</Styled.MonthArrow>
+        <Styled.MonthArrow onClick={handleNextMonth}>
+          <FontAwesomeIcon icon={faArrowRight} />
+        </Styled.MonthArrow>
       </Styled.MonthArea>
 
       <Styled.ResumeArea>

@@ -100,8 +100,6 @@ const App = () => {
       return false;
     });
 
-    console.log(list);
-
     localStorage.setItem("myFinances", JSON.stringify(newlist));
   }
 

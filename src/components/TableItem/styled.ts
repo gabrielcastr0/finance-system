@@ -18,3 +18,9 @@ export const Value = styled.div<{color: string}>`
   color: ${props => props.color};
   font-weight: bold;
 `;
+
+export const ActionButton = styled.button`
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+`;

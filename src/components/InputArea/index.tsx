@@ -1,6 +1,9 @@
 import { Item } from '../../types/Item';
 import * as Styled from './styled';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+
 type Props = {
   onAdd: (item: Item) => void;
 }
@@ -20,7 +23,9 @@ export const InputArea = ({onAdd}: Props) => {
   
   return(
     <Styled.Container>
-      <button onClick={handleAddEvent}>+Adicionar</button>
+      <Styled.AddButton onClick={handleAddEvent}>
+        <FontAwesomeIcon icon={faPlus} />Adicionar item
+      </Styled.AddButton>
     </Styled.Container>
   );
 }

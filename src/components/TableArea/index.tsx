@@ -17,11 +17,11 @@ export const TableArea = ({list, onDeleteItem }: Props) => {
     <Styled.Table>
       <thead>
         <tr>
-          <Styled.TableHeadColumn width={100}>Data</Styled.TableHeadColumn>
-          <Styled.TableHeadColumn width={130}>Categoria</Styled.TableHeadColumn>
+          <Styled.TableHeadColumn>Data</Styled.TableHeadColumn>
+          <Styled.TableHeadColumn>Categoria</Styled.TableHeadColumn>
           <Styled.TableHeadColumn>Título</Styled.TableHeadColumn>
-          <Styled.TableHeadColumn width={150}>Valor</Styled.TableHeadColumn>
-          <Styled.TableHeadColumn width={50}>#</Styled.TableHeadColumn>
+          <Styled.TableHeadColumn>Valor</Styled.TableHeadColumn>
+          <Styled.TableHeadColumn>Ações</Styled.TableHeadColumn>
         </tr>
       </thead>
       <tbody>
