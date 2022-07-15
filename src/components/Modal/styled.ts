@@ -10,10 +10,14 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 `;
 
 export const Content = styled.div`
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
     border-radius: 10px;
     padding: 40px;
     max-width: 500px;
@@ -38,7 +42,7 @@ export const CategoryTitle = styled.label`
     font-weight: bold;
     font-size: 18px;
     display: block;
-    color: #000;
+    color: #fff;
 `;
 
 export const CategorySelect = styled.select<{category : string}>`
@@ -47,9 +51,13 @@ export const CategorySelect = styled.select<{category : string}>`
     border-radius: 5px;
     margin-top: 5px;
     border: 1px solid #ccc;
+    background: transparent;
+    color: #fff;
 `;
 
-export const CategoryOption = styled.option``;
+export const CategoryOption = styled.option`
+    background: #00000099;
+`;
 
 
 export const TitleArea = styled.div`
@@ -61,7 +69,7 @@ export const Title = styled.label`
     font-weight: bold;
     font-size: 18px;
     display: block;
-    color: #000;
+    color: #fff;
 `;
 
 
@@ -71,6 +79,12 @@ export const InputTitle = styled.input<{title: string}>`
     border-radius: 5px;
     margin-top: 5px;
     border: 1px solid #ccc;
+    background: transparent;
+    color: #fff;
+
+    ::placeholder{
+        color: #fff;
+    }
 `;
 
 
@@ -84,7 +98,7 @@ export const ValueText = styled.label`
     font-weight: bold;
     font-size: 18px;
     display: block;
-    color: #000;
+    color: #fff;
 `;
 
 
@@ -94,6 +108,12 @@ export const InputValue = styled.input<{price: number}>`
     border-radius: 5px;
     margin-top: 5px;
     border: 1px solid #ccc;
+    background: transparent;
+    color: #fff;
+
+    ::placeholder{
+        color: #fff;
+    }
 `;
 
 
@@ -109,11 +129,16 @@ export const Footer = styled.div`
 export const BtnActions = styled.button<{close: boolean}>`
     margin-top: 20px;
     outline: 0;
-    border: 0;
-    background-color: ${props => props.close ? 'red' : '#00FF00'};
+    background-color: transparent;
+    border: 1px solid ${props => props.close ? 'red' : '#00FF00'};
     color: #FFF;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
+
+    &:hover{
+        background: ${props => props.close ? 'red' : '#00FF00'};
+        color: ${props => props.close ? '#fff' : '#000'};
+    }
 `;
