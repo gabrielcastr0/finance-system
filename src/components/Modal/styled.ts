@@ -110,7 +110,7 @@ export const BtnActions = styled.button<{close: boolean}>`
     margin-top: 20px;
     outline: 0;
     border: 0;
-    background-color: ${props => props.close ? 'red' : 'green'};
+    background-color: ${props => props.close ? 'red' : '#00FF00'};
     color: #FFF;
     padding: 10px 20px;
     cursor: pointer;

@@ -43,7 +43,7 @@ export const InfoArea = ({currentMonth, onMonthChange, income, expense}: Props) 
       <Styled.ResumeArea>
         <ResumeItem title="Receita" value={income}/>
         <ResumeItem title="Despesas" value={expense}/>
-        <ResumeItem title="Balanço" value={income - expense} color={(income-expense) < 0 ? 'red' : 'green'} />
+        <ResumeItem title="Balanço" value={income - expense} color={(income-expense) < 0 ? 'red' : '#00FF00'} />
       </Styled.ResumeArea>
 
     </Styled.Container>

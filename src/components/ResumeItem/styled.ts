@@ -7,12 +7,12 @@ export const Container = styled.div`
 export const Title = styled.div`
   text-align: center;
   font-weight: bold;
-  color: #888;
+  color: #fff;
   margin-bottom: 5px;
 `;
 
 export const Info = styled.div`
   text-align: center;
   font-weight: bold;
-  color: ${props => props.color ?? '#000'};
+  color: ${props => props.color ?? '#fff'};
 `;

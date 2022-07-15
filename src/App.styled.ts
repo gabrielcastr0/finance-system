@@ -1,17 +1,25 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  height: 100vh;
+  background: #ff00cc;
+  background: -webkit-linear-gradient(to right, #333399, #ff00cc);
+  background: linear-gradient(to right, #333399, #ff00cc);Chrome 26+, Opera 12+, Safari 7+ */
+`;
 
 export const Header = styled.header`
-  background: blue;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
   width: auto;
-  height: 9.375rem;
+  height: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const HeaderText = styled.h1`
   margin: 0;
   padding: 0;
-  padding-top: 1.875rem;
   text-align: center;
   color: #fff;
   text-transform: uppercase;

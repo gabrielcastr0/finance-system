@@ -28,7 +28,6 @@ const App = () => {
   }, [])
 
   useEffect(()=>{
-    console.log(list);
   }, [list])
 
   useEffect(()=>{
@@ -71,7 +70,7 @@ const App = () => {
       value: parseFloat(item.value.toFixed(2))
     };
 
-    let newList: any = [];
+    let newList: any = [{}];
 
     newList.push(newItem);
     localStorage.setItem("myFinances",JSON.stringify(newList));
@@ -91,7 +90,7 @@ const App = () => {
 
   const handleDeleteItem = (title: string) => {
     window.location.reload();
-
+    
     let newlist: Item[] = list.filter((item: Item) => {
       if (item.title !== title){
         return item;
@@ -99,7 +98,7 @@ const App = () => {
       
       return false;
     });
-
+    
     localStorage.setItem("myFinances", JSON.stringify(newlist));
   }
 

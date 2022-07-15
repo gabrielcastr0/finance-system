@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  background: #fff;
-  box-shadow: 0px 0px 5px #ccc;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
   padding: 20px;
-  margin-top: -40px;
+  margin-top: 30px;
   
   @media screen and (max-width: 425px){
     flex-direction: column;
@@ -19,6 +20,7 @@ export const MonthArea = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  color: #fff;
 `;
 
 export const MonthArrow = styled.div`
