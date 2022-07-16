@@ -127,6 +127,10 @@ const App = () => {
 
         <TableArea list={filteredList} onDeleteItem={handleDeleteItem}/>
       </Styled.Body>
+
+      <Styled.Footer>
+        <Styled.FooterText>Created by: gc4str0.tsx</Styled.FooterText>
+      </Styled.Footer>
     </Styled.Container>
   )
 }

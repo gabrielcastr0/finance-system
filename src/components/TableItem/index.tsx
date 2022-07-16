@@ -26,18 +26,18 @@ export const TableItem = ({item, handleDeleteItem }: Props) => {
       </Styled.TableColumn>
       <Styled.TableColumn>{item.title}</Styled.TableColumn>
       <Styled.TableColumn>
-        <Styled.Value color={categories[item.category].expense ? 'red' : 'green'}>
+        <Styled.Value color={categories[item.category].expense ? 'red' : '#00FF00'}>
           R$ {item.value}
         </Styled.Value>
       </Styled.TableColumn>
 
       <Styled.TableColumn>
-      <Styled.ActionButton onClick={() => alert("Em construção...")} type="button">
+        {/* <Styled.ActionButton onClick={() => alert("Em construção...")} type="button">
           <FontAwesomeIcon icon={faPenToSquare} />  
-        </Styled.ActionButton>   
+        </Styled.ActionButton>    */}
 
         <Styled.ActionButton onClick={() => onDeleteItem(item)} type="button">
-          <FontAwesomeIcon icon={faTrashCan} />  
+          <FontAwesomeIcon icon={faTrashCan} color="#fff"/>  
         </Styled.ActionButton>        
       </Styled.TableColumn>
     </Styled.TableLine>
