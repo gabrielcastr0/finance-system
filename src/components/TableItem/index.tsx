@@ -4,7 +4,7 @@ import {formatDate} from '../../helpers/dateFilter';
 import {categories} from '../../data/categories';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashCan, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 type Props = {
   item: Item;
