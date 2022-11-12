@@ -4,6 +4,7 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import {formatCurrentMonth} from '../../helpers/dateFilter';
 import {ResumeItem} from '../ResumeItem';
+import { useEffect } from 'react';
 
 type Props = {
   currentMonth: string;
@@ -41,9 +42,9 @@ export const InfoArea = ({currentMonth, onMonthChange, income, expense}: Props) 
       </Styled.MonthArea>
 
       <Styled.ResumeArea>
-        <ResumeItem title="Receita" value={income}/>
-        <ResumeItem title="Despesas" value={expense}/>
-        <ResumeItem title="Balanço" value={income - expense} color={(income-expense) < 0 ? 'red' : '#00FF00'} />
+        <ResumeItem title="Receita" value={parseFloat(income.toFixed(2))}/>
+        <ResumeItem title="Despesas" value={parseFloat(expense.toFixed(2))}/>
+        <ResumeItem title="Balanço" value={(parseFloat(income.toFixed(2)) - parseFloat(expense.toFixed(2)))} color={(income-expense) < 0 ? 'red' : '#00FF00'} />
       </Styled.ResumeArea>
 
     </Styled.Container>
