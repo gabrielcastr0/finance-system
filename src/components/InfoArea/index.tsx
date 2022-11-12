@@ -4,7 +4,6 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import {formatCurrentMonth} from '../../helpers/dateFilter';
 import {ResumeItem} from '../ResumeItem';
-import { useEffect } from 'react';
 
 type Props = {
   currentMonth: string;
